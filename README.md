@@ -35,7 +35,7 @@ Para começar a usar esta classe de validação, clone o repositório em sua má
 Clone o repositório
 
 ```
-git clone 
+git clone https://github.com/GE-ASDF/ValidationJS.git
 ```
 
 Inclua o Jquery e o Bootstrap e o arquivo close-btns.js
