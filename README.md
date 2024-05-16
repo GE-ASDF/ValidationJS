@@ -8,10 +8,10 @@ Este projeto contém uma classe de validação front-end que usa as stacks:
 
 para fornecer uma experiência de usuário suave e eficiente.
 
-<img src="./assets/image/image1.png" alt="Imagem da tela inicial da tela de login sem as mensagens de validação">
+<img src="./assets/img/image1.png" alt="Imagem da tela inicial da tela de login sem as mensagens de validação">
 
 
-<img src="./assets/image/image2.png" alt="Imagem da tela inicial da tela de login com as mensagens de validação">
+<img src="./assets/img/image2.png" alt="Imagem da tela inicial da tela de login com as mensagens de validação">
 
 ## Importante
 
