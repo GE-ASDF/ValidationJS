@@ -14,7 +14,8 @@ const auth = (e)=>{
     validate.validated();
 
     if(!validate.errors()){
-        e.target.submit();
+        FlashMessages.success("Campos validados com sucesso!");
+        // e.target.submit();
     }else{
         const errors = validate.errors();
         for(let error in errors){
