@@ -19,3 +19,14 @@
 #mensagem-informacional .alert{
     animation: alertShow 0.3s forwards ease;
 }
+
+.tempo-decorrido{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    font-size: 12px !important;
+    width:0px;
+    transition: all 1s ease-out;
+    width: 100%;
+    color:#fff;
+}
