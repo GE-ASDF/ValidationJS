@@ -173,10 +173,16 @@ rules(){
 
 ### Validações disponíveis
 
-- required;
-- minlen;
-- maxlen;
-- optional.
+- required - define um campo obrigatório;
+- minlen - define a quantidade mínima de caracteres para um campo;
+- maxlen - define a quantidade máxima de caracteres para um campo;
+- optional - define um campo opcional;
+- isInt - define que o campo deve ter valores inteiros;
+- isPositive - define que o campo deve ter valores positivos;
+- isNegative - define que o campo deve ter valores negativos;
+- on - cria um evento para um campo;
+- custom - executa uma função customizado do usuário.
+
 
 ### Validação múltipla
 

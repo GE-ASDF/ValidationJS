@@ -197,6 +197,76 @@ validations;
     }
 
     /**
+     * Valida se um número é inteiro
+     * @param {string} field - o campo o qual deve ser validado
+     * @returns string|bool
+     */
+     isInt(field){
+        let value = this.#getValueOfField(field);
+        value = value.replace(/\D/g, '');
+        if(value){
+            return value === Math.floor(value);        
+        }
+        this.#setError(field, 'isInt', `O campo deve ser um número inteiro`);
+        return false;
+    }
+
+    /**
+     * Valida se um número é positivo
+     * @param {string} field - o campo o qual deve ser validado
+     * @returns string|bool
+     */
+    isPositive(field){
+        let value = this.#getValueOfField(field);
+        value = value.replace(/\D/g, '');
+        if(value > 0){
+            return value;        
+        }
+        this.#setError(field, 'isInt', `O campo deve ser um número inteiro`);
+        return false;
+    }
+
+      /**
+     * Valida se um número é negativo
+     * @param {string} field - o campo o qual deve ser validado
+     * @returns string|bool
+     */
+    isNegative(field){
+        let value = this.#getValueOfField(field);
+        value = value.replace(/\D/g, '');
+        if(value < 0){
+            return value;        
+        }
+        this.#setError(field, 'isInt', `O campo deve ser um número inteiro`);
+        return false;
+    }
+
+    /**
+     * Executa uma função customizada pelo usuário
+     * @param {*} args 
+     * @param {function} callback 
+     * @returns 
+     */
+    custom(callback, args){
+        return callback(args);
+    }
+
+    /**
+     * Cria eventListener para um campo especificado e executa a callback enviada
+     * @param {string} field 
+     * @param {event} event 
+     * @param {function} callback 
+     * @returns 
+     */
+    on(field, event, callback){
+        if(typeof callback === 'function'){
+            document.querySelector(field).addEventListener(event, callback);
+            return;
+        }
+        throw new Error('O callback deve ser uma função válida.');
+    }
+
+    /**
      * Pega o valor dos campos a serem validados
      * @param {string} field - o campo do qual deve ser extraído o valor
      * @returns string|null
